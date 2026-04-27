@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// #include <uart.h>
+
+#include <uart.h>
+#include "kyma/utils.h"
 // #include <i2c.h>
 
 // #include <math.h>
@@ -11,23 +13,19 @@
 // #include <generated/csr.h>
 // #include <generated/soc.h>
 
-// #include "fpgaio.h"
-// #include "utils.h"
-// #include "lidar.h"
-// #include "imu.h"
+#include "fpgaio.h"
 
-// #include "kalman_filter.h"
-
-// KalmanState kf;
-// const int32_t dt_q16 = 13107; // 200 ms = 0.2 s
 
 
 
 int main(void)
 {
-    // fpgaio_enable_interrupts();
-    // uart_init();
-    // printf("Testing...");
+    fpgaio_enable_interrupts();
+    uart_init();
+
+    show_logo(); 
+    printf("Kyma in FPGA ...\n");
+
 
     return 0; 
 }
